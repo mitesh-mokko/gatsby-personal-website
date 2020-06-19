@@ -47,6 +47,17 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link className="navbar-item" to="/">
+              <img
+                src={require("../img/mitesh-320.jpg")}
+                height="64"
+                style={{
+                  width: 64,
+                  height: 64,
+                  maxHeight: "none",
+                  marginRight: "0.5rem",
+                  borderRadius: "100%",
+                }}
+              />
               <strong>Mitesh Shah</strong>
             </Link>
             {/* Hamburger menu */}
