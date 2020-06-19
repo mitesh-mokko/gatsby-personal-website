@@ -14,8 +14,10 @@ $mobile-h3-font-size: $mobile-h4-font-size * $mobile-font-scale;
 $mobile-h2-font-size: $mobile-h3-font-size * $mobile-font-scale;
 $mobile-h1-font-size: $mobile-h2-font-size * $mobile-font-scale;
 
+$webflow-mobile-portrait: 478px;
+
 @mixin mobile {
-  @media (max-width: 600px) {
+  @media (max-width: $webflow-mobile-portrait) {
     @content;
   }
 }
