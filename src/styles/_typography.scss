@@ -1,5 +1,8 @@
 html {
-  font-size: 19px;
+  font-size: $base-font-size;
+  @include mobile() {
+    font-size: $mobile-base-font-size;
+  }
 }
 
 .container {
@@ -7,22 +10,39 @@ html {
 }
 
 h1 {
-  font-size: 3.052rem;
+  font-size: $base-h1-font-size;
   font-weight: bold;
   margin-bottom: 2rem;
+  @include mobile() {
+    font-size: $mobile-h1-font-size;
+  }
 }
 
 h2 {
-  font-size: 2.441rem;
+  font-size: $base-h2-font-size;
   font-weight: bold;
+  @include mobile() {
+    font-size: $mobile-h2-font-size;
+  }
 }
 
 h3 {
-  font-size: 1.953rem;
+  font-size: $base-h3-font-size;
   font-weight: 600;
+  @include mobile() {
+    font-size: $mobile-h3-font-size;
+  }
 }
 
 h4 {
-  font-size: 1.563rem;
+  font-size: $base-h4-font-size;
   font-weight: 600;
+  @include mobile() {
+    font-size: $mobile-h4-font-size;
+  }
+}
+
+h5,
+h6 {
+  font-size: $base-font-size;
 }

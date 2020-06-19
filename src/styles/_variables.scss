@@ -1,0 +1,21 @@
+$base-font-size: 19px;
+$mobile-base-font-size: 18px;
+
+$base-font-scale: 1.25;
+$mobile-font-scale: 1.2;
+
+$base-h4-font-size: $base-font-size * $base-font-scale;
+$base-h3-font-size: $base-h4-font-size * $base-font-scale;
+$base-h2-font-size: $base-h3-font-size * $base-font-scale;
+$base-h1-font-size: $base-h2-font-size * $base-font-scale;
+
+$mobile-h4-font-size: $mobile-base-font-size * $mobile-font-scale;
+$mobile-h3-font-size: $mobile-h4-font-size * $mobile-font-scale;
+$mobile-h2-font-size: $mobile-h3-font-size * $mobile-font-scale;
+$mobile-h1-font-size: $mobile-h2-font-size * $mobile-font-scale;
+
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
