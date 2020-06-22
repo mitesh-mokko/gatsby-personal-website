@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "gatsby";
 import github from "../img/github-icon.svg";
 
+const myAvatarSize = 48;
+
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props);
@@ -49,10 +51,10 @@ const Navbar = class extends React.Component {
             <Link className="navbar-item" to="/">
               <img
                 src={require("../img/mitesh-320.jpg")}
-                height="64"
+                height={`${myAvatarSize}`}
                 style={{
-                  width: 64,
-                  height: 64,
+                  width: myAvatarSize,
+                  height: myAvatarSize,
                   maxHeight: "none",
                   marginRight: "0.5rem",
                   borderRadius: "100%",
