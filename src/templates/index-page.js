@@ -12,8 +12,8 @@ const techStack = [
   {
     id: "1",
     name: "React",
-    bg: "#61dafb",
-    color: "#222",
+    color: "#61dafb",
+    bg: "#222",
   },
   {
     id: "2",
@@ -37,11 +37,16 @@ const techStack = [
     bg: "#eeeeee",
     color: "black",
   },
+  {
+    id: "6",
+    name: "Expo",
+    bg: "#4630eb",
+  },
 ];
 
 const CoolCardContainer = styled.div`
   position: relative;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   padding: 1rem;
   background-color: ${(props) => props.bg || "#48e"};
   color: ${(props) => props.color || "white"};
