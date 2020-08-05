@@ -70,7 +70,7 @@ const CoolCardContainer = styled.div`
 
 const CoolCardContent = styled.div`
   position: relative;
-  transform: perspective(100px) translateZ(12px);
+  transform: translateZ(20px);
   pointer-events: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -131,7 +131,7 @@ const CoolCard = ({ label, bg, color }) => {
         transform: !!mousePos
           ? `rotateY(${-mousePos.x * yRange}deg) rotateX(${
               mousePos.y * xRange
-            }deg) perspective(100px) scale3d(1.06, 1.06, 1.06)`
+            }deg) perspective(100px) translateZ(10px)`
           : null,
       }}
     >
