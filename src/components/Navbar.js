@@ -50,6 +50,7 @@ const Navbar = class extends React.Component {
           <div className="navbar-brand">
             <Link className="navbar-item" to="/">
               <img
+                alt={`Mitesh Shah - Profile Shot`}
                 src={require("../img/mitesh-320.jpg")}
                 height={`${myAvatarSize}`}
                 style={{
