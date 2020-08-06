@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../../components/Layout";
+import ParallaxTile from "../../components/ParallaxTile";
 
 const data = [
   {
@@ -30,13 +31,15 @@ export default () => (
           have been obsessed with React based Design Systems.
         </p>
 
-        {data.map((project) => (
-          <div key={"prj_" + project.id} className="box">
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              <h3>{project.name}</h3>
-            </a>
-          </div>
-        ))}
+        <div className="columns is-multiline">
+          {data.map((project) => (
+            <div key={"prj_" + project.id} className="column is-4">
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <ParallaxTile label={project.name}></ParallaxTile>
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   </Layout>
