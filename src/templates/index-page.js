@@ -14,22 +14,26 @@ const techStack = [
     name: "React",
     color: "#61dafb",
     bg: "#222",
+    logo: require("../img/react-icon.svg"),
   },
   {
     id: "2",
     name: "React Native",
-    bg: "#61dafb",
-    color: "#222",
+    color: "#61dafb",
+    bg: "#222",
+    logo: require("../img/react-icon.svg"),
   },
   {
     id: "3",
     name: "Node.js",
     bg: "#026e00",
+    logo: require("../img/nodejs-icon.svg"),
   },
   {
     id: "4",
     name: "MongoDB",
     bg: "#13aa52",
+    logo: require("../img/mongodb-icon.svg"),
   },
   {
     id: "5",
@@ -41,6 +45,7 @@ const techStack = [
     id: "6",
     name: "Expo",
     bg: "#4630eb",
+    logo: require("../img/expo-icon.svg"),
   },
 ];
 
@@ -62,7 +67,7 @@ const CoolCardContainer = styled.div`
   //  overflow: hidden;
 
   &:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 2, 8, 0.2);
     transition: box-shadow 250ms ease;
     z-index: 5;
   }
@@ -74,6 +79,9 @@ const CoolCardContent = styled.div`
   pointer-events: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Shine = styled.div`
@@ -96,7 +104,7 @@ const Shine = styled.div`
       : null};
 `;
 
-const CoolCard = ({ label, bg, color }) => {
+const CoolCard = ({ label, logo, bg, color }) => {
   const [mousePos, setMousePos] = useState(null);
   const enableShine = false;
   const xRange = 12;
@@ -135,7 +143,10 @@ const CoolCard = ({ label, bg, color }) => {
           : null,
       }}
     >
-      <CoolCardContent>{label}</CoolCardContent>
+      <CoolCardContent>
+        {logo && <img src={logo} style={{ height: 64 }} />}
+        {label}
+      </CoolCardContent>
       {enableShine && !!mousePos && <Shine offset={mousePos} />}
     </CoolCardContainer>
   );
@@ -151,7 +162,12 @@ export const IndexPageTemplate = ({ image, title, heading, html }) => (
         <div className="columns is-multiline">
           {techStack.map((t) => (
             <div key={t.id} className="column is-4">
-              <CoolCard label={t.name} color={t.color} bg={t.bg} />
+              <CoolCard
+                label={t.name}
+                color={t.color}
+                bg={t.bg}
+                logo={t.logo}
+              />
             </div>
           ))}
         </div>
