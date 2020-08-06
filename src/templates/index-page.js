@@ -116,14 +116,26 @@ const CoolCard = ({ label, logo, bg, color }) => {
       onMouseOut={() => setMousePos(null)}
       onMouseMove={(event) => {
         let currentTargetRect = event.currentTarget.getBoundingClientRect();
-        const event_offsetX =
-            ((event.pageX - currentTargetRect.left) / currentTargetRect.width) *
-              2 -
-            1.0,
-          event_offsetY =
-            ((event.pageY - currentTargetRect.top) / currentTargetRect.height) *
-              2 -
-            1.0;
+        const event_offsetX = Math.max(
+            -1,
+            Math.min(
+              1,
+              ((event.clientX - currentTargetRect.left) /
+                currentTargetRect.width) *
+                2 -
+                1.0
+            )
+          ),
+          event_offsetY = Math.max(
+            -1,
+            Math.min(
+              1,
+              ((event.clientY - currentTargetRect.top) /
+                currentTargetRect.height) *
+                2.0 -
+                1.0
+            )
+          );
 
         setMousePos({
           x: event_offsetX,
