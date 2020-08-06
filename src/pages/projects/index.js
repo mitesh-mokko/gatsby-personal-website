@@ -18,6 +18,11 @@ const data = [
     name: "SQRL Workforce / Design System",
     link: "https://sqrl.me",
   },
+  {
+    id: 4,
+    name: "Tiffinity",
+    link: "https://demo.tiffinity.com",
+  },
 ];
 
 export default () => (
