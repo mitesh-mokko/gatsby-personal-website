@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import github from "../img/github-icon.svg";
+//import github from "../img/github-icon.svg";
 
 const myAvatarSize = 48;
 
@@ -103,16 +103,18 @@ const Navbar = class extends React.Component {
                 </Link>
 
                 */}
-              <a
-                className="navbar-item"
-                href="https://github.com/mitesh-mokko"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
+              {/*
+                  <a
+                    className="navbar-item"
+                    href="https://github.com/mitesh-mokko"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="icon">
+                      <img src={github} alt="Github" />
+                    </span>
+                  </a>
+                  */}
             </div>
           </div>
         </div>

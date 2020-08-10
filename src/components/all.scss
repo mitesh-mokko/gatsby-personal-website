@@ -94,6 +94,12 @@ $black: #2b2523;
 footer.footer {
   padding: 3rem;
   background-color: transparent;
+
+  .flex-row {
+    img {
+      display: block;
+    }
+  }
 }
 
 //Menu overrides
@@ -115,19 +121,12 @@ $menu-label-color: $white-ter;
   text-align: left;
 }
 
-.social {
-  padding: 2em;
-}
-
-.social a {
-  padding: 0.5em 0.5em 0.3em 0.5em;
-  border-radius: 1em;
-  background-color: $white-ter;
-  margin: 0.5em;
-  width: 1em;
-  height: 1em;
-  vertical-align: middle;
-  display: inline;
+a.social {
+  transition: opacity 400ms ease, transform 400ms ease;
+  &:hover {
+    opacity: 0.66;
+    transform: translateY(-2px);
+  }
 }
 
 // blog roll
@@ -141,6 +140,13 @@ $menu-label-color: $white-ter;
 .blog-list-item .featured-thumbnail {
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 @import "~bulma";

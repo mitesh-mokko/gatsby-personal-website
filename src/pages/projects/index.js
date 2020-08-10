@@ -4,22 +4,27 @@ import ParallaxTile from "../../components/ParallaxTile";
 
 const data = [
   {
-    id: 1,
+    id: "1",
+    name: "Route",
+    link: "https://getroute.com",
+  },
+  {
+    id: "2",
     name: "Alogent Design Language",
     link: "https://alogent-design-language.netlify.app",
   },
   {
-    id: 2,
+    id: "3",
     name: "Alogent NXT Scout",
     link: "https://nxt-scout.netlify.app",
   },
   {
-    id: 3,
+    id: "4",
     name: "SQRL Workforce / Design System",
     link: "https://sqrl.me",
   },
   {
-    id: 4,
+    id: "5",
     name: "Tiffinity",
     link: "https://demo.tiffinity.com",
   },
