@@ -1,16 +1,16 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react'
+import { Link } from 'gatsby'
 //import github from "../img/github-icon.svg";
 
-const myAvatarSize = 48;
+const myAvatarSize = 48
 
 const Navbar = class extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       active: false,
-      navBarActiveClass: "",
-    };
+      navBarActiveClass: '',
+    }
   }
 
   toggleHamburger = () => {
@@ -24,20 +24,20 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: "is-active",
+              navBarActiveClass: 'is-active',
             })
           : this.setState({
-              navBarActiveClass: "",
-            });
+              navBarActiveClass: '',
+            })
       }
-    );
-  };
+    )
+  }
 
-  onKeyDown = (evt) => {
+  onKeyDown = evt => {
     if (evt.keyCode === 13) {
-      this.toggleHamburger();
+      this.toggleHamburger()
     }
-  };
+  }
 
   render() {
     return (
@@ -51,14 +51,14 @@ const Navbar = class extends React.Component {
             <Link className="navbar-item" to="/">
               <img
                 alt={`Mitesh Shah - Profile Shot`}
-                src={require("../img/mitesh-320.jpg")}
+                src={require('../img/mitesh-320.jpg')}
                 height={`${myAvatarSize}`}
                 style={{
                   width: myAvatarSize,
                   height: myAvatarSize,
-                  maxHeight: "none",
-                  marginRight: "0.5rem",
-                  borderRadius: "100%",
+                  maxHeight: 'none',
+                  marginRight: '0.5rem',
+                  borderRadius: '100%',
                 }}
               />
               <strong>Mitesh Shah</strong>
@@ -88,6 +88,14 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/projects">
                 Projects
               </Link>
+              <a
+                className="navbar-item"
+                href="/files/Mitesh-Shah-Resume-2020.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume
+              </a>
               {/*
                 <Link className="navbar-item" to="/about">
                   About
@@ -119,8 +127,8 @@ const Navbar = class extends React.Component {
           </div>
         </div>
       </nav>
-    );
+    )
   }
-};
+}
 
-export default Navbar;
+export default Navbar

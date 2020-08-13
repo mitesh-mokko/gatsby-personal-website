@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
 const CoolCardContainer = styled.div`
   position: relative;
   border-radius: 0.5rem;
   padding: 1rem;
-  background-color: ${(props) => props.bg || "#48e"};
-  color: ${(props) => props.color || "white"};
+  background-color: ${props => props.bg || '#48e'};
+  color: ${props => props.color || 'white'};
   height: 8rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -23,7 +23,7 @@ const CoolCardContainer = styled.div`
     transition: box-shadow 250ms ease;
     z-index: 5;
   }
-`;
+`
 
 const CoolCardContent = styled.div`
   position: relative;
@@ -35,7 +35,7 @@ const CoolCardContent = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-`;
+`
 
 const Shine = styled.div`
   position: absolute;
@@ -49,27 +49,27 @@ const Shine = styled.div`
   pointer-events: none;
   transform: translateZ(1px);
 
-  ${(props) =>
+  ${props =>
     props.offset
       ? `transform: translateX(${props.offset.x * 100}px) translateY(${
           props.offset.y * 60
         }px) translateZ(1px) scale3d(2, 2, 2)`
       : null};
-`;
+`
 
 const CoolCard = ({ label, logo, bg, color, children, ...rest }) => {
-  const [mousePos, setMousePos] = useState(null);
-  const enableShine = false;
-  const xRange = 12;
-  const yRange = 20;
+  const [mousePos, setMousePos] = useState(null)
+  const enableShine = false
+  const xRange = 12
+  const yRange = 20
 
   return (
     <div {...rest}>
       <CoolCardContainer
         onMouseOver={() => setMousePos({ x: 0, y: 0 })}
         onMouseOut={() => setMousePos(null)}
-        onMouseMove={(event) => {
-          let currentTargetRect = event.currentTarget.getBoundingClientRect();
+        onMouseMove={event => {
+          let currentTargetRect = event.currentTarget.getBoundingClientRect()
           const event_offsetX = Math.max(
               -1,
               Math.min(
@@ -89,14 +89,14 @@ const CoolCard = ({ label, logo, bg, color, children, ...rest }) => {
                   2.0 -
                   1.0
               )
-            );
+            )
 
           setMousePos({
             x: event_offsetX,
             y: event_offsetY,
             width: currentTargetRect.width,
             height: currentTargetRect.height,
-          });
+          })
         }}
         bg={bg}
         color={color}
@@ -117,7 +117,7 @@ const CoolCard = ({ label, logo, bg, color, children, ...rest }) => {
         {enableShine && !!mousePos && <Shine offset={mousePos} />}
       </CoolCardContainer>
     </div>
-  );
-};
+  )
+}
 
-export default CoolCard;
+export default CoolCard
