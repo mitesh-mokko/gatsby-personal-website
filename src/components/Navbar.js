@@ -9,7 +9,7 @@ const Navbar = class extends React.Component {
     super(props)
     this.state = {
       active: false,
-      navBarActiveClass: '',
+      navBarActiveClass: ''
     }
   }
 
@@ -17,17 +17,17 @@ const Navbar = class extends React.Component {
     // toggle the active boolean in the state
     this.setState(
       {
-        active: !this.state.active,
+        active: !this.state.active
       },
       // after state has been updated,
       () => {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: 'is-active',
+              navBarActiveClass: 'is-active'
             })
           : this.setState({
-              navBarActiveClass: '',
+              navBarActiveClass: ''
             })
       }
     )
@@ -58,7 +58,7 @@ const Navbar = class extends React.Component {
                   height: myAvatarSize,
                   maxHeight: 'none',
                   marginRight: '0.5rem',
-                  borderRadius: '100%',
+                  borderRadius: '100%'
                 }}
               />
               <strong>Mitesh Shah</strong>
@@ -90,7 +90,7 @@ const Navbar = class extends React.Component {
               </Link>
               <a
                 className="navbar-item"
-                href="/files/Mitesh-Shah-Resume-2020.pdf"
+                href="/files/Mitesh-Shah-Resume-2020-B.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
