@@ -3,6 +3,8 @@ templateKey: index-page
 title: Mitesh's Blog
 image: /img/home-jumbotron.jpg
 heading: Mitesh's Blog
+availableFullTime: true
+availableFreelance: true
 ---
 
 # Hi 👋
