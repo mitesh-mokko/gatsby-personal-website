@@ -15,39 +15,39 @@ const techStack = [
     name: 'React',
     color: '#61dafb',
     bg: '#222',
-    logo: require('../img/react-icon.svg')
+    logo: require('../img/react-icon.svg'),
   },
   {
     id: '2',
     name: 'React Native',
     color: '#61dafb',
     bg: '#222',
-    logo: require('../img/react-icon.svg')
+    logo: require('../img/react-icon.svg'),
   },
   {
     id: '3',
     name: 'Node.js',
     bg: '#026e00',
-    logo: require('../img/nodejs-icon.svg')
+    logo: require('../img/nodejs-icon.svg'),
   },
   {
     id: '4',
     name: 'MongoDB',
     bg: '#13aa52',
-    logo: require('../img/mongodb-icon.svg')
+    logo: require('../img/mongodb-icon.svg'),
   },
   {
     id: '5',
     name: 'Express',
     bg: '#eeeeee',
-    color: 'black'
+    color: 'black',
   },
   {
     id: '6',
     name: 'Expo',
     bg: '#4630eb',
-    logo: require('../img/expo-icon.svg')
-  }
+    logo: require('../img/expo-icon.svg'),
+  },
 ]
 
 export const IndexPageTemplate = ({
@@ -56,7 +56,7 @@ export const IndexPageTemplate = ({
   heading,
   html,
   availableFullTime,
-  availableFreelance
+  availableFreelance,
 }) => (
   <div>
     <section className="section section--gradient">
@@ -68,7 +68,7 @@ export const IndexPageTemplate = ({
             style={{
               display: 'flex',
               flexDirection: 'row',
-              flexWrap: 'wrap'
+              flexWrap: 'wrap',
             }}
           >
             <AvailablePill
@@ -114,7 +114,7 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string
+  heading: PropTypes.string,
 }
 
 const IndexPage = ({ data }) => {
@@ -137,9 +137,9 @@ const IndexPage = ({ data }) => {
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
-    })
-  })
+      frontmatter: PropTypes.object,
+    }),
+  }),
 }
 
 export default IndexPage
