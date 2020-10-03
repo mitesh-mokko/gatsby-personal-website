@@ -59,6 +59,7 @@ export const IndexPageTemplate = ({
   <div>
     <section className="section section--gradient">
       <div className="container">
+        <MDXRenderer>{html}</MDXRenderer>
         <div style={{ marginTop: '3rem', marginBottom: '2rem' }}>
           <div
             style={{
@@ -139,7 +140,7 @@ IndexPage.propTypes = {
 }
 
 export default IndexPage
-
+/*
 export const pageQuery = graphql`
   query IndexPageTemplate {
     mdx(frontmatter: { templateKey: { eq: "index-page" } }) {
@@ -160,3 +161,4 @@ export const pageQuery = graphql`
     }
   }
 `
+*/
