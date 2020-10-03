@@ -13,7 +13,6 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - A simple landing page with blog functionality built with Netlify CMS
 - Editabe Pages: Landing, About, Product, Blog-Collection and Contact page with Netlify Form support
 - Create Blog posts from Netlify CMS
-- Tags: Separate page for posts under each tag
 - Basic directory organization
 - Uses Bulma for styling, but size is reduced by `purge-css-plugin`
 - Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
@@ -41,6 +40,7 @@ After clicking that button, you’ll authenticate with GitHub and choose a repos
 ### Access Locally
 
 Pulldown a local copy of the Github repository Netlify created for you, with the name you specified in the previous step
+
 ```
 $ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
 $ cd [REPO_NAME]
@@ -82,13 +82,17 @@ CMS.registerPreviewTemplate('blog', BlogPostPreview)
 
 Note: Don't forget to also remove them from `package.json` and `yarn.lock` / `package-lock.json` using `yarn` or `npm`. During the build netlify-cms-app will bundle the media libraries as well, having them removed will save you build time.
 Example:
+
 ```
 yarn remove netlify-cms-media-library-uploadcare
 ```
+
 OR
+
 ```
 yarn remove netlify-cms-media-library-cloudinary
 ```
+
 ## Getting Started (Without Netlify)
 
 ```
