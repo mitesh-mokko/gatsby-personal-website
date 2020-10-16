@@ -10,15 +10,19 @@ export default ({ availableFullTime, availableFreelance }) => (
         flexWrap: 'wrap'
       }}
     >
-      <AvailablePill
-        available={availableFullTime}
-        label="Available for full-time remote work"
-        style={{ marginRight: '1rem' }}
-      />
-      <AvailablePill
-        available={availableFreelance}
-        label="Available for freelance projects"
-      />
+      {availableFullTime && (
+        <AvailablePill
+          available={availableFullTime}
+          label="Available for full-time remote work"
+          style={{ marginRight: '1rem' }}
+        />
+      )}
+      {availableFreelance && (
+        <AvailablePill
+          available={availableFreelance}
+          label="Available for freelance projects"
+        />
+      )}
     </div>
     <div>
       Connect for work:&nbsp;&nbsp;&nbsp;&nbsp;
