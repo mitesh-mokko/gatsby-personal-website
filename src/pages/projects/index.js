@@ -10,6 +10,13 @@ const data = [
     bg: '#ca9052'
   },
   {
+    id: '0.1',
+    name: 'Piano UI',
+    link: 'https://piano-ui.netlify.app',
+    bg: '#f0f0f0',
+    color: '#000000'
+  },
+  {
     id: '1',
     name: 'Route',
     link: 'https://getroute.com',

@@ -40,6 +40,11 @@ const techStack = [
     name: 'Expo',
     bg: '#4630eb',
     logo: require('../img/expo-icon.svg')
+  },
+  {
+    id: '7',
+    name: 'Next.js',
+    bg: '#2a84ff'
   }
 ]
 
